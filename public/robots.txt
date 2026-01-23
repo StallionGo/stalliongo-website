@@ -1,0 +1,22 @@
+# robots.txt for StallionGo
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stallion-go.com/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow search engines to crawl everything else
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for polite crawling
+User-agent: *
+Crawl-delay: 1
