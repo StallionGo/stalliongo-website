@@ -55,7 +55,7 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <a
-                href="mailto:contact@stallion-go.com"
+                href="mailto:info@stalliongo.com"
                 className="flex items-center gap-4 text-slate-400 hover:text-primary-400 transition-colors"
               >
                 <div className="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
@@ -63,12 +63,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Email</div>
-                  <div className="text-white">contact@stallion-go.com</div>
+                  <div className="text-white">info@stalliongo.com</div>
                 </div>
               </a>
 
               <a
-                href="tel:+1234567890"
+                href="tel:+94773799390"
                 className="flex items-center gap-4 text-slate-400 hover:text-primary-400 transition-colors"
               >
                 <div className="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
@@ -76,7 +76,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Phone</div>
-                  <div className="text-white">+1 (234) 567-890</div>
+                  <div className="text-white">+94 77 379 9390</div>
                 </div>
               </a>
 

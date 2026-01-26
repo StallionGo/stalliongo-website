@@ -98,7 +98,7 @@ export default function RootLayout({
       "Leading software company providing enterprise solutions, web & mobile development, cloud services, and digital transformation.",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "contact@stallion-go.com",
+      email: "info@stalliongo.com",
       contactType: "customer service",
       availableLanguage: ["English"],
     },
@@ -131,8 +131,8 @@ export default function RootLayout({
     name: "StallionGo",
     image: `${siteUrl}/stalliongo.png`,
     url: siteUrl,
-    telephone: "+1-234-567-890",
-    email: "contact@stallion-go.com",
+    telephone: "+94773799390",
+    email: "info@stalliongo.com",
     priceRange: "$$",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
