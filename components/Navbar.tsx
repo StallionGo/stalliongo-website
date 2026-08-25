@@ -36,7 +36,7 @@ export default function Navbar() {
               href="#contact"
               className="px-5 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium transition-colors duration-200"
             >
-              Get Started
+              Let&apos;s Talk
             </a>
           </div>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
               className="block mt-4 px-5 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg font-medium text-center transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Get Started
+              Let&apos;s Talk
             </a>
           </div>
         )}

@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 import Logo from "./Logo";
 
 const quickLinks = [
@@ -9,15 +9,14 @@ const quickLinks = [
 ];
 
 const services = [
-  "Web Development",
-  "Mobile Apps",
-  "Cloud & DevOps",
-  "Enterprise Solutions",
+  "Fractional Engineering",
+  "Custom Development",
+  "Strategy & Architecture",
+  "Team Building",
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/insafzakariya/", label: "LinkedIn" },
   { icon: Github, href: "#", label: "GitHub" },
 ];
 
@@ -31,8 +30,8 @@ export default function Footer() {
               <Logo />
             </a>
             <p className="text-slate-400 mb-6 max-w-sm">
-              Building innovative software solutions that drive business growth
-              and digital transformation.
+              Helping companies turn ideas &amp; business challenges into scalable
+              software &amp; AI solutions.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (

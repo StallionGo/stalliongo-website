@@ -1,25 +1,25 @@
-import { Target, Users, Award, TrendingUp } from "lucide-react";
+import { Compass, Cpu, Trophy, Globe2 } from "lucide-react";
 
 const highlights = [
   {
-    icon: Target,
-    title: "Mission Driven",
-    description: "Delivering innovative solutions that solve real business challenges",
+    icon: Compass,
+    title: "Strategic Thinking",
+    description: "Technology decisions aligned with your business objectives",
   },
   {
-    icon: Users,
-    title: "Expert Team",
-    description: "Senior engineers with deep expertise across technologies",
+    icon: Cpu,
+    title: "Technical Excellence",
+    description: "Deep expertise across modern technologies and architectures",
   },
   {
-    icon: Award,
-    title: "Quality First",
-    description: "Rigorous testing and code review for reliable software",
+    icon: Trophy,
+    title: "Proven Track Record",
+    description: "50+ successful projects delivered across industries",
   },
   {
-    icon: TrendingUp,
-    title: "Scalable Solutions",
-    description: "Architecture designed to grow with your business",
+    icon: Globe2,
+    title: "Global Experience",
+    description: "Worked with clients across 6 countries and multiple time zones",
   },
 ];
 
@@ -30,29 +30,28 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Building the{" "}
+              Hi, I&apos;m{" "}
               <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-                Future
-              </span>{" "}
-              of Software
+                Insaf Zakariya
+              </span>
             </h2>
             <p className="text-slate-400 text-lg mb-6 leading-relaxed">
-              We are a team of passionate engineers and designers dedicated to
-              crafting exceptional software solutions. With over a decade of
-              experience, we have helped businesses across industries transform
-              their operations through technology.
+              Software Engineering Consultant with over a decade of experience
+              building scalable software solutions. I help companies transform
+              ideas and business challenges into working products.
             </p>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              We bring dedication, expertise, and innovation to every project,
-              regardless of size. Our agile approach ensures rapid delivery
-              without compromising on quality.
+              Through StallionGo, I provide fractional engineering services,
+              technical consulting, and end-to-end development. Whether you need
+              strategic guidance or hands-on engineering, I bring the expertise
+              to deliver results.
             </p>
 
             <div className="grid grid-cols-3 gap-6">
               {[
-                { value: "50+", label: "Projects Completed" },
+                { value: "10+", label: "Years Experience" },
+                { value: "50+", label: "Projects Delivered" },
                 { value: "20+", label: "Happy Clients" },
-                { value: "25+", label: "Team Members" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-3xl font-bold text-primary-400">
@@ -64,7 +63,7 @@ export default function About() {
             </div>
 
             <div className="mt-6">
-              <div className="text-slate-500 mb-3">Countries Served</div>
+              <div className="text-slate-500 mb-3">Global Client Base</div>
               <div className="flex flex-wrap gap-3">
                 {[
                   { flag: "🇱🇰", name: "Sri Lanka" },
@@ -73,6 +72,7 @@ export default function About() {
                   { flag: "🇺🇸", name: "USA" },
                   { flag: "🇦🇺", name: "Australia" },
                   { flag: "🇳🇿", name: "New Zealand" },
+                  { flag: "🇦🇪", name: "UAE" },
                 ].map((country) => (
                   <div
                     key={country.name}

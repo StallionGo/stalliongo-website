@@ -1,37 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin } from "lucide-react";
+import { Forminit } from "forminit";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const forminit = new Forminit();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+    const { data, error: submitError } = await forminit.submit('qw36ggmo5my', formData);
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        form.reset();
-      }
-    } catch (error) {
-      console.error("Form submission error:", error);
-    } finally {
+    if (submitError) {
+      setError(submitError.message);
       setIsSubmitting(false);
+      return;
     }
+
+    setIsSubmitted(true);
+    setIsSubmitting(false);
+    form.reset();
   };
 
   return (
@@ -45,8 +43,8 @@ export default function Contact() {
             </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Ready to start your project? Contact us today and let us discuss how
-            we can help transform your business.
+            Ready to discuss your project? Let&apos;s talk about how I can help
+            transform your ideas into scalable solutions.
           </p>
         </div>
 
@@ -55,7 +53,7 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <a
-                href="mailto:info@stalliongo.com"
+                href="mailto:insaf.zak@gmail.com"
                 className="flex items-center gap-4 text-slate-400 hover:text-primary-400 transition-colors"
               >
                 <div className="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
@@ -63,7 +61,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Email</div>
-                  <div className="text-white">info@stalliongo.com</div>
+                  <div className="text-white">insaf.zak@gmail.com</div>
                 </div>
               </a>
 
@@ -86,21 +84,36 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Location</div>
-                  <div className="text-white">San Francisco, CA</div>
+                  <div className="text-white">Remote / Global</div>
                 </div>
               </div>
+
+              <a
+                href="https://www.linkedin.com/in/insaf-zakariya/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-slate-400 hover:text-primary-400 transition-colors"
+              >
+                <div className="w-12 h-12 bg-primary-500/10 rounded-lg flex items-center justify-center">
+                  <Linkedin className="w-5 h-5 text-primary-400" />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-500">LinkedIn</div>
+                  <div className="text-white">linkedin.com/in/insaf-zakariya</div>
+                </div>
+              </a>
             </div>
 
             <div className="mt-10 p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
               <h4 className="font-semibold text-white mb-2">
-                Working Hours
+                Availability
               </h4>
               <p className="text-slate-400 text-sm">
-                Monday - Friday: 9:00 AM - 6:00 PM (IST)
+                Flexible hours across time zones
                 <br />
-                Weekend: Available for urgent support
+                Available for both short-term consulting and long-term engagements
                 <br />
-                <span className="text-primary-400">Flexible hours available for different time zones</span>
+                <span className="text-primary-400">Response within 24 hours</span>
               </p>
             </div>
           </div>
@@ -128,36 +141,53 @@ export default function Contact() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="firstName"
                       className="block text-sm font-medium text-slate-300 mb-2"
                     >
-                      Name
+                      First Name
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id="firstName"
+                      name="fi-sender-firstName"
                       required
                       className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-white placeholder-slate-500 transition-all"
-                      placeholder="John Doe"
+                      placeholder="John"
                     />
                   </div>
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="lastName"
                       className="block text-sm font-medium text-slate-300 mb-2"
                     >
-                      Email
+                      Last Name
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="text"
+                      id="lastName"
+                      name="fi-sender-lastName"
                       required
                       className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-white placeholder-slate-500 transition-all"
-                      placeholder="john@example.com"
+                      placeholder="Doe"
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-slate-300 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="fi-sender-email"
+                    required
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-white placeholder-slate-500 transition-all"
+                    placeholder="john@example.com"
+                  />
                 </div>
 
                 <div>
@@ -170,7 +200,7 @@ export default function Contact() {
                   <input
                     type="text"
                     id="subject"
-                    name="subject"
+                    name="fi-text-subject"
                     required
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-white placeholder-slate-500 transition-all"
                     placeholder="Project Inquiry"
@@ -186,13 +216,19 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="fi-text-message"
                     rows={5}
                     required
                     className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-white placeholder-slate-500 transition-all resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>
+
+                {error && (
+                  <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                    <p className="text-red-400 text-sm">{error}</p>
+                  </div>
+                )}
 
                 <button
                   type="submit"

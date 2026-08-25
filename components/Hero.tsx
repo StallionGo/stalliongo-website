@@ -14,23 +14,23 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full mb-8">
             <Sparkles className="w-4 h-4 text-primary-400" />
             <span className="text-sm text-primary-300">
-              Transforming Ideas Into Digital Reality
+              Fractional Engineering Services
             </span>
           </div>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-slide-up">
-          <span className="text-white">Enterprise Software</span>
+          <span className="text-white">Turn Ideas Into</span>
           <br />
           <span className="bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 bg-clip-text text-transparent">
-            Solutions
+            Scalable Software
           </span>
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 animate-fade-in-delay">
-          We build scalable, high-performance software solutions that drive
-          business growth. From enterprise systems to cloud infrastructure,
-          we deliver excellence.
+          Software Engineering Consultant helping companies transform ideas &amp;
+          business challenges into scalable software &amp; AI solutions. Strategy •
+          Architecture • Engineering
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-delay">
@@ -38,7 +38,7 @@ export default function Hero() {
             href="#contact"
             className="group px-8 py-4 bg-primary-600 hover:bg-primary-700 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center gap-2"
           >
-            Start Your Project
+            Schedule a Consultation
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
@@ -51,10 +51,10 @@ export default function Hero() {
 
         <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto animate-fade-in-delay">
           {[
-            { value: "50+", label: "Projects Delivered" },
-            { value: "20+", label: "Enterprise Clients" },
-            { value: "99%", label: "Client Satisfaction" },
             { value: "10+", label: "Years Experience" },
+            { value: "50+", label: "Projects Delivered" },
+            { value: "20+", label: "Happy Clients" },
+            { value: "7", label: "Countries Served" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-white">
@@ -75,6 +75,7 @@ export default function Hero() {
               { flag: "🇺🇸", name: "USA" },
               { flag: "🇦🇺", name: "Australia" },
               { flag: "🇳🇿", name: "New Zealand" },
+              { flag: "🇦🇪", name: "UAE" },
             ].map((country) => (
               <div
                 key={country.name}
