@@ -1,29 +1,29 @@
-import { Zap, Shield, Clock, Wrench } from "lucide-react";
+import { Award, Layers, Target, CheckCircle2 } from "lucide-react";
 
 const reasons = [
   {
-    icon: Zap,
-    title: "Lightning Fast Delivery",
+    icon: Award,
+    title: "Senior-Level Expertise",
     description:
-      "Agile methodology and efficient workflows ensure rapid development without sacrificing quality. Get your product to market faster.",
+      "Direct access to experienced engineering leadership without the overhead of a full-time executive hire. Get strategic guidance when you need it.",
   },
   {
-    icon: Shield,
-    title: "Enterprise-Grade Security",
+    icon: Layers,
+    title: "Flexible Engagement",
     description:
-      "Security-first approach with industry best practices. Your data and applications are protected with robust security measures.",
+      "Scale up or down based on your project needs. From advisory roles to hands-on development, engagement models that work for you.",
   },
   {
-    icon: Clock,
-    title: "24/7 Support",
+    icon: Target,
+    title: "End-to-End Ownership",
     description:
-      "Round-the-clock technical support and maintenance. We are always here when you need us, ensuring minimal downtime.",
+      "From strategy and architecture to delivery and deployment. I take ownership of outcomes, not just tasks.",
   },
   {
-    icon: Wrench,
-    title: "Custom Solutions",
+    icon: CheckCircle2,
+    title: "Proven Methodologies",
     description:
-      "No cookie-cutter approaches. Every solution is tailored to your specific business needs and objectives.",
+      "Industry best practices refined over 10+ years and 50+ projects. Battle-tested approaches that deliver reliable results.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
             </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Partner with a team that is committed to your success
+            Partner with a consultant committed to your success
           </p>
         </div>
 

@@ -1,48 +1,34 @@
 import {
-  Globe,
-  Smartphone,
-  Cloud,
-  Database,
-  Cog,
-  Headphones,
+  Users,
+  Code2,
+  Lightbulb,
+  GraduationCap,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Globe,
-    title: "Web Development",
+    icon: Users,
+    title: "Fractional Engineering Services",
     description:
-      "Custom web applications built with modern frameworks. Scalable, secure, and optimized for performance.",
+      "Part-time CTO or Engineering Leadership without the full-time cost. Get senior-level expertise to guide your technical decisions and team growth.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Apps",
+    icon: Code2,
+    title: "Custom Software Development",
     description:
-      "Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.",
+      "End-to-end software development tailored to your specific requirements. From web applications to AI solutions, built with scalability in mind.",
   },
   {
-    icon: Cloud,
-    title: "Cloud & DevOps",
+    icon: Lightbulb,
+    title: "Strategy & Architecture",
     description:
-      "Cloud infrastructure setup, migration, and DevOps automation. AWS, Azure, and GCP expertise.",
+      "Technical strategy, architecture decisions, and technology selection. Make informed choices that align with your business goals and scale with your growth.",
   },
   {
-    icon: Database,
-    title: "Enterprise Solutions",
+    icon: GraduationCap,
+    title: "Team Building & Mentorship",
     description:
-      "Custom ERP, CRM, and enterprise software tailored to streamline your business operations.",
-  },
-  {
-    icon: Cog,
-    title: "API & Integration",
-    description:
-      "RESTful APIs, microservices architecture, and seamless third-party integrations.",
-  },
-  {
-    icon: Headphones,
-    title: "Consulting & Support",
-    description:
-      "Technical consulting, code audits, and 24/7 support to keep your systems running smoothly.",
+      "Helping companies build, scale, and mentor engineering teams. Transfer knowledge and establish best practices for long-term success.",
   },
 ];
 
@@ -58,12 +44,12 @@ export default function Services() {
             </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Comprehensive software solutions to accelerate your digital
-            transformation journey
+            Helping companies turn ideas &amp; business challenges into scalable
+            software &amp; AI solutions
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list">
+        <div className="grid md:grid-cols-2 gap-6" role="list">
           {services.map((service) => (
             <article
               key={service.title}
